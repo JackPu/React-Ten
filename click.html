@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>专属照片，让爱随行</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css"/>
+    <style type="text/css">
+        #doc{
+            background: #fff;
+        }
+        .page{
+            width: 400px;
+            height: 500px;
+            transform-origin: center center;
+            -webkit-transform-origin: center center;
+        }   
+        .page.show{
+            transform: rotate3d(1 ,0 ,0,90deg );
+            -webkit-transform: rotate3d(1 ,0 ,0,90deg );
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <div id="doc">
+        <div class="contents">
+           <p> <a href="#" class="btn">点击我</a> </p>
+            <div class="page"></div>
+            
+            
+        </div>
+    </div>
+<script src="./static/js/Animate.js"></script>   
+
+<script src="./static/js/Scroller.js"></script>
+    <script src="./static/js/render.js"></script>
+<script src="./static/js/jquery-2.1.1.min.js"></script>
+
+    
+    <script type="text/javascript">
+        $('.btn').on('click',function(){
+            $('.page').addClass('show');
+        })
+    
+    </script>
+</body>
+</html>
